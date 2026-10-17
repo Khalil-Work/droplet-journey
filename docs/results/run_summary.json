@@ -1,0 +1,28 @@
+{
+  "runtime": {
+    "python": "3.13.5",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "system": "Windows-11-10.0.26200-SP0"
+  },
+  "validation": {
+    "case": "frozen surface, constant B_M, no heating",
+    "max_relative_diameter_error": 1.6940658945086004e-16,
+    "analytical_model_extinction_time_s": 0.13885094202907972
+  },
+  "coupled": {
+    "case": "water in dry air, Clapeyron surface (boiling rejected), Nu=2 closure h(D)=2 k_g/D, Le=1 mass closure",
+    "D0_um": 80.0,
+    "stop_reason": "threshold",
+    "threshold_stopping_time_s": 1.9365454813401843,
+    "remaining_mass_fraction": 3.162277660167576e-05,
+    "T_d_final_K": 294.2000217000027,
+    "D_final_um": 2.5298221281344895,
+    "solver_success": true,
+    "note": "threshold stop near the singular endpoint of the 0-D closure; a model result under stated constant conditions, not a validated lifetime"
+  },
+  "animation": {
+    "file": "droplet_journey.gif",
+    "frames": 41
+  }
+}
