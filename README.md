@@ -6,6 +6,21 @@
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![python](https://img.shields.io/badge/python-3.12%20%7C%203.13-blue.svg)](requirements.txt)
 
+## ▶ Open the animations
+
+- **[Khalil Population Atlas — 16 size groups and a liquid/vapor mass ledger](https://github.com/khalil-official/droplet-journey/raw/refs/heads/main/docs/results/population_atlas/khalil_population_atlas.gif)** · [equations, API and reproduction](docs/population_atlas.md)
+- **[Single-droplet heating and evaporation](https://github.com/khalil-official/droplet-journey/raw/refs/heads/main/docs/results/droplet_journey.gif)**
+
+Tap either link to open the GIF itself. If your app shows a still preview,
+open the same link in your web browser to view the animation.
+
+[![Khalil Population Atlas: computed droplet-size evolution and liquid/vapor ledger](docs/results/population_atlas/khalil_population_atlas.gif)](https://github.com/khalil-official/droplet-journey/raw/refs/heads/main/docs/results/population_atlas/khalil_population_atlas.gif)
+
+💠 **Khalil Population Atlas:** a bespoke analytic population experiment
+created for this project. It compares 16 weighted droplet-size groups with
+a population of one size at matched initial mass and D32. Every animated
+state comes from the saved constant-K calculation. [Read the full guide](docs/population_atlas.md).
+
 <div align="center">
 
 **▶ Watch the computed droplet evolve:**
@@ -55,8 +70,9 @@ Full derivation: [docs/model.md](docs/model.md); API:
 
 ```bash
 python -m pip install -r requirements-dev.txt
-python -m pytest tests -q                       # 10 verification tests
+python -m pytest tests -q                       # 25 test cases: single droplet + population
 python examples/run_verification.py             # figures + GIF + raw data
+python examples/khalil_population_atlas.py      # population comparison + 61-frame GIF
 ```
 
 Verified runtimes: Python 3.13.5, NumPy 2.1.3, SciPy 1.15.3, Windows 11;
@@ -68,9 +84,11 @@ and GIF with the results script above.
 
 ```
 droplet_journey/
-└── model.py          # Spalding, d2 law, Clapeyron, lumped heating,
+├── model.py          # Spalding, d2 law, Clapeyron, lumped heating,
                       # q-formulation integrator with threshold stopping
+└── population.py    # analytic weighted populations, D32 and mass ledger
 tests/test_model.py   # 10 verification tests incl. independent reference
+tests/test_population.py # 15 population test cases incl. invalid inputs
 examples/run_verification.py
 docs/ model.md  api.md  verification.md  results/
 ```
@@ -105,6 +123,12 @@ Clapeyron anchor + boiling rejection, **physical area scaling** (catches
 the 1/D area error), frozen-state exactness, threshold-stop semantics,
 independent tight-tolerance coupled reference, input validation, and
 non-finite guards. Evidence and limits: [docs/verification.md](docs/verification.md).
+
+The population addition has 15 further passing test cases covering hand
+values, exact extinction, weighted moments, scaling, mass bookkeeping and
+invalid inputs. The complete suite passed **25 cases** on Python 3.13.5,
+NumPy 2.1.3. Its recorded mass-ledger relative error is 1.12e-16; this is an
+arithmetic closure check. [Population evidence and limits](docs/population_atlas.md).
 
 ## ⚠️ Limitations
 

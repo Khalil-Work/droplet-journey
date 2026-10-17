@@ -1,0 +1,43 @@
+{
+  "name": "Khalil droplet population atlas",
+  "k_m2_s": 2.5e-08,
+  "density_kg_m3": 997.0,
+  "diameter0_m": [
+    1.9999999999999998e-05,
+    2.277035832858729e-05,
+    2.5924460920613225e-05,
+    2.951546323189105e-05,
+    3.3603883701220114e-05,
+    3.82586236554478e-05,
+    4.3558128489655614e-05,
+    4.959170969160522e-05,
+    5.646104999025632e-05,
+    6.428191699432078e-05,
+    7.318611420045947e-05,
+    8.332370225106859e-05,
+    9.486552787606734e-05,
+    0.00010800610313843198,
+    0.00012296688350682254,
+    0.00014
+  ],
+  "number_weights": [
+    2.0,
+    8.0,
+    22.0,
+    56.0,
+    125.0,
+    245.0,
+    420.0,
+    632.0,
+    837.0,
+    972.0,
+    992.0,
+    889.0,
+    700.0,
+    484.0,
+    294.0,
+    157.0
+  ],
+  "comparison": "Same initial liquid mass and D32; monodisperse number weight adjusted accordingly",
+  "scope": "Independent analytic constant-K droplets; no thermal coupling, gas feedback, motion, breakup or experiments"
+}
