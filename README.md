@@ -1,6 +1,6 @@
 # 💧 Droplet Journey
 
-**Evaporation, heating, and physical stopping events: an original 0-D single-droplet model — d²-law mass transfer with the Spalding driving force, lumped heating with the correct sphere area, and a documented positive threshold stop near the singular endpoint — verified to machine precision against the exact constant-condition law and an independent tight-tolerance reference.**
+**An original 0-D single-droplet model for evaporation, heating and explicit stopping rules. The frozen constant-K benchmark reaches the floating-point error floor; the coupled model is checked separately against a tight-tolerance Radau reference on a shared valid interval.**
 
 [![tests](https://github.com/khalil-official/droplet-journey/actions/workflows/ci.yml/badge.svg)](https://github.com/khalil-official/droplet-journey/actions/workflows/ci.yml)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -60,7 +60,9 @@ python examples/run_verification.py             # figures + GIF + raw data
 ```
 
 Verified runtimes: Python 3.13.5, NumPy 2.1.3, SciPy 1.15.3, Windows 11;
-CI runs the suite on Ubuntu. Tests ≈ 2 s; results script ≈ 10 s.
+CI runs the suite on Ubuntu. The independent isolated-environment run passed
+10 tests in 16.43 s on Windows; runtime varies by machine. Generate the figures
+and GIF with the results script above.
 
 ## 🧱 Architecture and API
 
@@ -108,7 +110,7 @@ non-finite guards. Evidence and limits: [docs/verification.md](docs/verification
 
 - 0-D lumped model; no internal gradients, convection, radiation, or
   multicomponent physics; constant properties.
-- Le = 1 mass closure; departing-vapor sensible enthalpy neglected.
+- Le = 1 mass closure; constant latent heat and no gas-film blowing corrections.
 - Boiling regimes rejected, not modeled; threshold stop is a property of
   the closure's singular endgame.
 - No experimental validation is claimed anywhere.

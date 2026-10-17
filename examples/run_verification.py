@@ -161,19 +161,23 @@ def make_coupled_figure(coupled):
 
 def make_gif(grids):
     t_grid, D_grid, T_grid = grids
-    fig, ax = plt.subplots(1, 2, figsize=(10.6, 4.2), dpi=140)
-    (line_D,) = ax[0].plot([], [], color=BLUE, lw=1.8)
+    fig, ax = plt.subplots(2, 1, figsize=(8.0, 7.0), dpi=140)
+    (line_D,) = ax[0].plot([], [], color=BLUE, lw=1.8, marker="o", markevery=[-1], ms=4)
     ax[0].set_xlim(0.0, t_grid[-1])
     ax[0].set_ylim(0.0, D_grid[0] * 1e6 * 1.05)
     ax[0].set_xlabel("t [s]")
     ax[0].set_ylabel("D [µm]")
     title_D = ax[0].set_title("Diameter at t = 0.00 s")
-    (line_T,) = ax[1].plot([], [], color=RED, lw=1.8)
+    (line_T,) = ax[1].plot([], [], color=RED, lw=1.8, marker="o", markevery=[-1], ms=4)
     ax[1].set_xlim(0.0, t_grid[-1])
-    ax[1].set_ylim(T_grid.min() - 2.0, 332.0)
+    margin = max(0.2, 0.12 * float(np.ptp(T_grid)))
+    ax[1].set_ylim(T_grid.min() - margin, T_grid.max() + margin)
+    ax[1].text(0.98, 0.08, "Gas temperature: 330 K; droplet close-up",
+               transform=ax[1].transAxes, ha="right", fontsize=9)
     ax[1].set_xlabel("t [s]")
     ax[1].set_ylabel("T_d [K]")
     title_T = ax[1].set_title("Droplet temperature at t = 0.00 s")
+    fig.tight_layout(pad=2.0)
 
     writer = mpl_animation.PillowWriter(fps=8)
     with writer.saving(fig, RESULTS / "droplet_journey.gif", dpi=140):

@@ -42,8 +42,15 @@ regime is outside its validity and is rejected, never clamped.
 with the convective coefficient h [W/m²K] supplied as a callback h(D); the
 demo case uses the Nu = 2 conduction-limit closure h(D) = 2 k_g / D.
 Q_evap = ṁ·h_fg is the latent sink with ṁ = ρ_l π D K / 4 consistent with
-the d² law. The sensible enthalpy of the departing vapor is neglected —
-part of this closure's stated assumptions.
+the d² law. Here h_fg approximates the vapor-minus-liquid enthalpy at the
+interface temperature. If liquid sensible energy is referenced as c_pl*T_d,
+the open-system balance is
+
+    d(m_l c_pl T_d)/dt = Q_heat − ṁ (c_pl T_d + h_fg).
+
+Using dm_l/dt = −ṁ cancels the departing liquid-temperature sensible term
+and gives the temperature equation above. Constant latent heat, unit Lewis
+number and the Nu=2 demo omit detailed gas-film blowing/property corrections.
 
 ## Numerical method
 
@@ -54,7 +61,8 @@ The coupled system is integrated in the state (q, T_d) with q = D²:
 using DOP853 (rtol 1e-11) and a dense solution for uniform post-sampling.
 
 **Documented positive stopping threshold.** The lumped thermal time
-constant scales with D² and the Clapeyron surface state steepens as mass
+constant scales with D² for the demo's Nu=2 closure (with fixed h it scales
+with D), and the Clapeyron surface state steepens as mass
 vanishes — a genuinely singular terminal stage of this closure. The
 coupled run therefore TERMINATES at q_stop = ε·q0 (ε = 1e-3 by default) and
 reports the stopping time, remaining mass fraction (ε^1.5), and reason.
