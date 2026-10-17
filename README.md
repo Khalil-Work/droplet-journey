@@ -151,3 +151,8 @@ arithmetic closure check. [Population evidence and limits](docs/population_atlas
 Dependencies: NumPy (BSD-3), SciPy (BSD), Matplotlib (PSF-based), Pillow
 (HPND), pytest (MIT). This repository's own code is original and
 MIT-licensed; see [LICENSE](LICENSE).
+
+
+---
+
+Calendar metadata: [reconstructed date records](docs/CALENDAR_HISTORY.md) were generated on 18 October 2026. Their historical author dates are synthetic; they do not date the software development. Original source commits and actual committer dates are preserved.
