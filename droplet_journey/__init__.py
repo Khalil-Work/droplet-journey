@@ -1,5 +1,6 @@
 """droplet_journey: 0-D single-droplet evaporation and heating with events."""
 
+from .drag import drag_coefficient, reynolds, terminal_velocity
 from .model import (
     d2_law_constant,
     d2_law_diameter,
@@ -13,6 +14,9 @@ from .model import (
 )
 
 __all__ = [
+    "drag_coefficient",
+    "reynolds",
+    "terminal_velocity",
     "d2_law_constant",
     "d2_law_diameter",
     "droplet_rhs",
