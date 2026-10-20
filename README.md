@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/banner.svg" alt="Droplet Journey banner: droplet shrinking under the d2 law with vapor wisps and temperature rise" width="100%">
+<img src="docs/banner.gif" alt="Droplet Journey animated banner: droplet shrinking under the d2 law with drifting vapor wisps" width="100%">
 
 # 💧 Droplet Journey
 
