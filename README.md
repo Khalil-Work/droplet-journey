@@ -61,10 +61,10 @@ flowchart TD
     B --> C[K from unit-Le closure]
     C --> D[Integrate q = D², DOP853 rtol 1e-11]
     D --> E[Lumped heating with h callback e.g. Nu = 2]
-    E --> F{q < ε q₀ ?}
+    E --> F{"q < ε q₀ ?"}
     F -- no --> D
     F -- yes --> G[🛑 record stop time + remaining mass + reason]
-    E --> H{p_sat ≥ p_amb ?}
+    E --> H{"p_sat ≥ p_amb ?"}
     H -- yes --> I[❌ boiling rejected — outside validity]
     G --> J[✅ history, figures, GIF, ledger]
 ```
