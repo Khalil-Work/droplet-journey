@@ -10,13 +10,13 @@
 model is checked against a tight-tolerance Radau reference, and every stopping rule is
 stated — never silent.**
 
-[![tests](https://github.com/khalil-official/droplet-journey/actions/workflows/ci.yml/badge.svg)](https://github.com/khalil-official/droplet-journey/actions/workflows/ci.yml)
+[![tests](https://github.com/khalil-work/droplet-journey/actions/workflows/ci.yml/badge.svg)](https://github.com/khalil-work/droplet-journey/actions/workflows/ci.yml)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![python](https://img.shields.io/badge/python-3.12%20%7C%203.13-blue.svg)](requirements.txt)
 [![tests](https://img.shields.io/badge/tests-30%20passing-brightgreen.svg)](tests)
 [![precision](https://img.shields.io/badge/d%C2%B2%20law%20error-1.7e--16-orange.svg)](docs/verification.md)
-[![repo stars](https://img.shields.io/github/stars/khalil-official/droplet-journey?style=flat&color=yellow)](https://github.com/khalil-official/droplet-journey/stargazers)
-[![last commit](https://img.shields.io/github/last-commit/khalil-official/droplet-journey?color=9cf)](https://github.com/khalil-official/droplet-journey/commits)
+[![repo stars](https://img.shields.io/github/stars/khalil-work/droplet-journey?style=flat&color=yellow)](https://github.com/khalil-work/droplet-journey/stargazers)
+[![last commit](https://img.shields.io/github/last-commit/khalil-work/droplet-journey?color=9cf)](https://github.com/khalil-work/droplet-journey/commits)
 
 [Quick start](#-quick-start) · [Model](#-model-method-and-stopping) · [Animations](#%EF%B8%8F-results-gallery-animations) · [Verification](#%EF%B8%8F-verification) · [References](#-references)
 
@@ -151,7 +151,7 @@ Evidence and limits: [docs/verification.md](docs/verification.md).
 
 **💠 Khalil Population Atlas — 16 size groups and a liquid/vapor mass ledger**
 
-[![Khalil Population Atlas: computed droplet-size evolution and liquid/vapor ledger](docs/results/population_atlas/khalil_population_atlas.gif)](https://github.com/khalil-official/droplet-journey/raw/refs/heads/main/docs/results/population_atlas/khalil_population_atlas.gif)
+[![Khalil Population Atlas: computed droplet-size evolution and liquid/vapor ledger](docs/results/population_atlas/khalil_population_atlas.gif)](https://github.com/khalil-work/droplet-journey/raw/refs/heads/main/docs/results/population_atlas/khalil_population_atlas.gif)
 
 <sub>A bespoke analytic population experiment created for this project: 16 weighted
 droplet-size groups vs a monodisperse population at matched initial mass and D32.
