@@ -1,6 +1,6 @@
 # 💠 Khalil Droplet Population Atlas
 
-A bespoke addition to Droplet Journey for MOHAMMED AHMED: an analytic,
+A bespoke addition to Droplet Journey for KHALIL: an analytic,
 weighted population experiment, with a liquid/vapor ledger and an animated
 view of each size group's disappearance. This addition was written for this
 repository; it contains no imported third-party solver implementation.
