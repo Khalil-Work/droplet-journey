@@ -18,7 +18,7 @@ stated — never silent.**
 [![repo stars](https://img.shields.io/github/stars/khalil-work/droplet-journey?style=flat&color=yellow)](https://github.com/khalil-work/droplet-journey/stargazers)
 [![last commit](https://img.shields.io/github/last-commit/khalil-work/droplet-journey?color=9cf)](https://github.com/khalil-work/droplet-journey/commits)
 
-[Quick start](#-quick-start) · [Model](#-model-method-and-stopping) · [Animations](#%EF%B8%8F-results-gallery-animations) · [Verification](#%EF%B8%8F-verification) · [References](#-references)
+[Homepage](https://khalil-work.github.io) · [Quick start](#-quick-start) · [Model](#-model-method-and-stopping) · [Animations](#%EF%B8%8F-results-gallery-animations) · [Verification](#%EF%B8%8F-verification) · [References](#-references)
 
 </div>
 
